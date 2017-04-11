@@ -25,10 +25,13 @@ public class DBManager {
 	String upsql;
 	String desql;
 	String sesql;
-	// Get current user work directory
-	// String propertiesPath = System.getProperty("user.dir").replace("\\", "/")
-	// + "/src/util/DBManager.properties";
-	String propertiesPath = "f:/GitHub/Graduation-Project-Server-/src/util/DBManager.properties";
+//	 Get current user work directory
+	 String propertiesPath;
+	 public void SetPropertiesPath(String propertiesPath)
+	 {this.propertiesPath=propertiesPath+"/DBManager.properties";
+	 System.out.println("…Ë÷√propertiePathŒ™£∫ "+propertiesPath);}
+	// String propertiesPath =
+	// "f:/GitHub/Graduation-Project-Server-/src/util/DBManager.properties";
 	Connection conn = null;
 
 	public DBManager() {

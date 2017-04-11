@@ -24,7 +24,7 @@
 	crossorigin="anonymous"></script>
 </head>
 <body
-	style="background-image: url(image/2.jpg); background-repeat: no-repeat; background-attachment: fixed; background-size: cover">
+	style="background-image: url(image/2.jpg); background-repeat: no-repeat; background-attachment: fixed; background-size: cover" >
 	<div class="container-fluid">
 		<div class="row-fluid">
 			<div class="row-fluid">

@@ -48,6 +48,8 @@ public class ShowList extends HttpServlet {
 			throws ServletException, IOException {
 		//资源列表展示页面，JSP忘得差不多了，用硬编码实现
 		DBManager db = new DBManager();
+		db.SetPropertiesPath(this.getServletContext().getRealPath("").replace("\\", "/")
+	 + "WEB-INF/classes/util");
 		Connection conn = null;
 		Statement stmt = null;
 		// TODO Auto-generated method stub
@@ -56,8 +58,8 @@ public class ShowList extends HttpServlet {
 				"<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">");
 		pw.println("<html>");
 		pw.println("<head>");
-		pw.println("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">");
-		pw.println("<title>Sorce List</title>");
+		pw.println("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=GB2312\">");
+		pw.println("<title>SourceList</title>");
 		pw.println("<link rel=\"stylesheet\"");
 		pw.println("href=\"https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css\"");
 		pw.println("integrity=\"sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u\"");

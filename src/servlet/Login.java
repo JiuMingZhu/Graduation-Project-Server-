@@ -54,6 +54,8 @@ public class Login extends HttpServlet {
 		if (userName == null || userPasswd == null)
 			response.sendRedirect("index.jsp");
 		DBManager db = new DBManager();
+		db.SetPropertiesPath(this.getServletContext().getRealPath("").replace("\\", "/")
+				 + "WEB-INF/classes/util");
 		Connection conn = db.getConnection();
 		if (conn == null)
 			try {

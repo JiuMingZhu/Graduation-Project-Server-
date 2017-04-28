@@ -6,11 +6,11 @@
 <script type="text/javascript">
 <!--JS函数，用于重定向至登录界面-->
 	function Alert() {
-		alert("用户名或密码错误，点击确定后3秒返回登录页面");
-		setTimeout('Redirect()', 3000);
+		alert("该分类下暂时没有资源");
+		setTimeout('Redirect()', 1);
 	}
 	function Redirect() {
-		window.location = "index.jsp";
+		window.location = "List1.html";
 	}
 	Alert();
 </script>
@@ -18,6 +18,6 @@
 <title>Insert title here</title>
 </head>
 <body
-	style="background-image: url(image/3.jpg); background-repeat: no-repeat; background-attachment: fixed; background-size: cover">
+	style="background-image: url(image/2.jpg); background-repeat: no-repeat; background-attachment: fixed; background-size: cover">
 </body>
 </html>

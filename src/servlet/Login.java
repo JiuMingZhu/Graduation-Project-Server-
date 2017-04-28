@@ -76,7 +76,7 @@ public class Login extends HttpServlet {
 		ResultSet rs = db.selectSql(stmt, sesql);
 		try {
 			if (rs.next())
-				response.sendRedirect("ShowList");
+				response.sendRedirect("ShowList_1");
 			else
 				response.sendRedirect("LoginError.jsp");
 		} catch (SQLException e) {

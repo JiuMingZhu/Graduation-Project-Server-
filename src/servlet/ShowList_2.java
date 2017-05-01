@@ -13,6 +13,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import dao.DBManager;
 
@@ -44,6 +45,15 @@ public class ShowList_2 extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		//设置Session，禁止未登录用户访问
+		HttpSession httpSession = request.getSession();
+		if (httpSession.getAttribute("loginStatus") == null) {
+			response.sendRedirect("LoginNot.jsp");
+		} else {
+			if(httpSession.getAttribute("loginStatus").equals("false")){
+				response.sendRedirect("LoginNot.jsp");
+			}
+			else{
 		String  listName=new String(request.getParameter("listName").getBytes("iso-8859-1"),"utf-8");
 		System.out.println("以下是读取到的入参");
 		System.out.println(listName);
@@ -122,5 +132,7 @@ public class ShowList_2 extends HttpServlet {
 		out.write(sb.toString().getBytes("utf-8"));
 		out.close();
 		response.sendRedirect("List2.html");
+			}
+		}
 	}
 }

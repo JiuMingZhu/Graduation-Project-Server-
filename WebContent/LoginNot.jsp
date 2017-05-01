@@ -6,7 +6,7 @@
 <script type="text/javascript">
 <!--JS函数，用于重定向至登录界面-->
 	function Alert() {
-		alert("登陆失败");
+		alert("尚未登陆");
 		setTimeout('Redirect()', 1);
 	}
 	function Redirect() {

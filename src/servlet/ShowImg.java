@@ -63,7 +63,7 @@ public class ShowImg extends HttpServlet {
 		CreateImg demo = new CreateImg();
 		demo.createQrcode(content, imgType, version, pixel, imgPath);
 		System.out.println("二维码生成完毕");
-		String filePath = this.getServletContext().getRealPath("").replace("\\", "/") + "ShowImg.html";
+		String filePath = this.getServletContext().getRealPath("").replace("\\", "/") + "ShowImg_"+sourceId+".html";
 		System.out.println("ShowImg.html文件的路径为" + filePath);
 		File file = new File(filePath);
 		if (!file.exists()) {
@@ -87,7 +87,7 @@ public class ShowImg extends HttpServlet {
 		sb.append("</div>");
 		sb.append("</body>");
 		sb.append("</html>");
-		response.sendRedirect("ShowImg.html");
+		response.sendRedirect("ShowImg_"+sourceId+".html");
 		out.write(sb.toString().getBytes("utf-8"));
 		out.close();
 	}

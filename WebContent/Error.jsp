@@ -6,11 +6,11 @@
 <script type="text/javascript">
 <!--JS函数，用于重定向至登录界面-->
 	function Alert() {
-		alert("登陆失败");
+		alert("该分类下暂时没有资源");
 		setTimeout('Redirect()', 1);
 	}
 	function Redirect() {
-		window.location = "index.jsp";
+		window.location = "List1.html";
 	}
 	Alert();
 </script>
